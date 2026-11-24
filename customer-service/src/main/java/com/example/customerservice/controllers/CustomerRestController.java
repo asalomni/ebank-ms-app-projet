@@ -12,7 +12,7 @@ public class CustomerRestController {
     private CustomerService customerService;
 
     public CustomerRestController(CustomerService customerService){
-        this.customerService = customerService
+        this.customerService = customerService;
     }
     @GetMapping("/customers")
     public List<Customer> getAllCustomers(){
