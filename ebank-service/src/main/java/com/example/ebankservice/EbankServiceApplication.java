@@ -24,7 +24,7 @@ public class EbankServiceApplication {
                                 .type(Math.random()>0.5? "CURRENT-ACCOUNT":"SAVING-ACCOUNT")
                                 .balance (1000+ Math.random()*60000)
                                 .customerId(i)
-                        .build())
+                        .build());
             }
             }
         }
