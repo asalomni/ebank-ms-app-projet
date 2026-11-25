@@ -1,7 +1,11 @@
 package com.example.ebankservice;
 
+import com.example.ebankservice.entities.BankAccount;
+import com.example.ebankservice.services.EbankService;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class EbankServiceApplication {
@@ -10,4 +14,16 @@ public class EbankServiceApplication {
         SpringApplication.run(EbankServiceApplication.class, args);
     }
 
+    @Bean
+    CommandLineRunner commandLineRunner (EbankService ebankService){
+        return args -> {
+            for (int i = 1 ; i <= 3 ;i++){
+            for (int j= 0; j < 5 ;j++) {
+                ebankService.save (BankAccount.builder()
+
+                        .build())
+            }
+            }
+        }
+}
 }
